@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Members;
 
 class UserController extends Controller
 {
@@ -12,9 +13,11 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Members $membersModel, $where=array())
     {
-        return view('admin.user.dashboard');
+        $members = $membersModel->MembersList($where);
+        $assign = compact('members');
+        return view('admin.user.index',$assign);
     }
 
     /**

@@ -16,16 +16,15 @@
     <link href="{{ URL::asset('static/admin/vendors/nprogress/nprogress.css') }}" rel="stylesheet">
     <!-- iCheck -->
     <link href="{{ URL::asset('static/admin/vendors/iCheck/skins/flat/green.css') }}" rel="stylesheet">
-
     <!-- bootstrap-progressbar -->
     <link href="{{ URL::asset('static/admin/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css') }}" rel="stylesheet">
     <!-- JQVMap -->
     <link href="{{ URL::asset('static/admin/vendors/jqvmap/dist/jqvmap.min.css') }}" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
     <link href="{{ URL::asset('static/admin/vendors/bootstrap-daterangepicker/daterangepicker.css') }}" rel="stylesheet">
-
     <!-- Custom Theme Style -->
     <link href="{{ URL::asset('static/admin/build/css/custom.min.css') }}" rel="stylesheet">
+    @yield('link')
 </head>
 
 <body class="nav-md">
@@ -162,7 +161,7 @@
                             <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                                 <li>
                                     <a>
-                                        <span class="image"><img src="images/img.jpg" alt="Profile Image"/></span>
+                                        <span class="image"><img src="{{ URL::asset('static/admin/images/img.jpg') }}" alt="Profile Image"/></span>
                                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>

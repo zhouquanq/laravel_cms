@@ -59,4 +59,6 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
         Route::get('create', 'ArticleController@create');
         Route::post('store', 'ArticleController@store');
     });
+
+
 });
